@@ -3,4 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="beanA" class="fr.afcepf.al26.spring.A">
+        <property name="dependenceDeB" ref="beanB"/>
+    </bean>
+	<bean id="beanB" class="fr.afcepf.al26.spring.B">
+        <property name="dependenceDeC" ref="beanC"/>
+    </bean>
+	<bean id="beanC" class="fr.afcepf.al26.spring.C"/>
 </beans>
